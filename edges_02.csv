@@ -1,0 +1,214 @@
+subject,object,relation
+acetylcholinesterase,acetylcholinesterase,inhibit
+acetylcholinesterase,amyloid-beta binding,interact with
+acetylcholinesterase,amyloid-beta binding,increase deposition of
+alpha-Synuclein,Lewy Neurites,is a major component of
+alpha-Synuclein,phospholipids,interacts with
+"PARK2 protein, human",SEPTIN5 wt Allele,was found to be a substrate for
+alpha-Synuclein,Lewy Bodies,is associated with
+Lewy Neurites,alpha-Synuclein,are made of
+APP wt Allele,Ganglioside GM1,binds to
+caffeine,Parkinson Disease,contributes to
+levodopa,Parkinson Disease,treats
+alpha-Synuclein,Parkinson Disease,associated with
+alpha-Synuclein,Neuroglia,accumulates in
+alpha-Synuclein,Ubiquitin,binds to
+alpha-Synuclein,Lewy Bodies,is associated with
+alpha-Synuclein,Brain,is associated with
+alpha-Synuclein,Lewy Bodies,is associated with
+Lewy Neurites,alpha-Synuclein,are made of
+Lewy Bodies,alpha-Synuclein,is associated with
+Lewy Bodies,Lewy Neurites,has
+Lewy Bodies,Cholinesterases,is treated with
+"HD protein, human",Huntington Disease,associated with
+Mitochondria,Alzheimer's Disease,involved in
+Amyloid beta-Peptides,Presenilin-1,interacts with
+Amyloid beta-Peptides,Presenilin-2,interacts with
+Amyloid beta-Peptides,alpha-Synuclein,interacts with
+alpha-Synuclein,Parkinson Disease,cause
+Presenilins,Amyloid beta-Peptides,is involved in generating
+BAX gene,Truncated BID,interacts with
+BAX gene,BAX gene,promotes expression and/or intracellular distribution of
+alpha-Synuclein,Lewy Bodies,aggregates within
+Amyloid beta-Peptides,Endoplasmic Reticulum,accumulates in
+Amyloid beta-Peptides,alpha-Synuclein,interacts with
+Amyloid beta-Peptides,Neurofibrillary degeneration (morphologic abnormality),induces
+rotenone,Parkinson Disease,causes
+levodopa,Parkinson Disease,can substantially reduce clinical symptoms of
+Amyloid beta-Peptides,Senile Plaques,is converted to
+Presenilins,Alzheimer's Disease,are associated with
+Presenilins,Amyloid beta-Peptides,process
+Presenilins,beta catenin,interact with
+iron,Reactive Oxygen Species,enhance production of
+iron,alpha-Synuclein,induce aggregation and toxicity of
+iron,alpha-Synuclein,interact with
+Apolipoprotein E,Cardiovascular system,implicated in
+Kynurenine,Quinolinic Acid,leads to production of
+pioglitazone,Substantia nigra structure,protect
+minocycline,Substantia nigra structure,protect
+hydrogen peroxide,DNA,causes damage to
+Cerebrovascular Circulation,Craniocerebral Trauma,is decreased by
+Cerebrovascular Circulation,"Anti-Inflammatory Agents, Non-Steroidal",is increased by
+cysteamine,Heme Oxygenase-1,up-regulates
+dopamine,Heme Oxygenase-1,up-regulates
+Amyloid beta-Peptides,Heme Oxygenase-1,up-regulates
+"interleukin-1, beta",Heme Oxygenase-1,up-regulates
+TNF gene,Heme Oxygenase-1,up-regulates
+Mesoporphyrins,Heme Oxygenase-1,inhibits
+dexamethasone,Heme Oxygenase-1,inhibits
+Heme Oxygenase-1,Alzheimer's Disease,over-expressed in
+Heme Oxygenase-1,Parkinson Disease,over-expressed in
+caspase,"HD protein, human",cleaves
+caspase,Amyloid beta-Peptides,cleaves
+caspase,Presenilins,cleaves
+caspase,Huntington Disease,contributes to
+caspase,Alzheimer's Disease,contributes to
+serotonin,Hydroxyindoleacetic Acid,has reduced level of
+"PARK2 protein, human",alpha-Synuclein,co-localizes with
+alpha-Synuclein,Parkinson Disease,causes
+"PARK2 protein, human",Parkinson Disease,causes
+"UBE2L3 protein, human","PARK2 protein, human",is E2-binding partner of
+Hydroxymethylglutaryl-CoA Reductase Inhibitors,APP wt Allele,have effects on
+"Anti-Inflammatory Agents, Non-Steroidal",APP wt Allele,have effects on
+Amyloid beta-Peptides,Disintegrins,undergoes proteolysis by
+Amyloid beta-Peptides,APP wt Allele,has toxic domain
+Presenilins,Notch,cleaves
+alpha-Synuclein,Lewy Bodies,is present in
+Cholinergic Neurons,Cell Nucleus,degenerate in
+alpha-Synuclein,Synphilin-1,interacts with
+carbon monoxide,Heme Oxygenase (Decyclizing),is a product of
+Bilirubin,Heme Oxygenase (Decyclizing),is a product of
+Tumeric,curcumin,contains
+Hydroxymethylglutaryl-CoA Reductase Inhibitors,nitric oxide,decrease
+Hydroxymethylglutaryl-CoA Reductase Inhibitors,"TNF protein, human",decrease
+tacrine,Lewy Bodies,was used in the treatment of
+rivastigmine,Lewy Bodies,is effective for patients with
+iron,Amyloid beta-Peptides,mediate the toxicity of
+Amyloid beta-Peptides,iron,decrease the toxicity of
+alpha-Synuclein,phospholipids,is associated with
+alpha-Synuclein,Lewy Neurites,is the major component of
+alpha-Synuclein,DNA,may bind to
+galantamine,acetylcholinesterase,inhibits
+Parkinson Disease,alpha-Synuclein,is associated with
+Parkinson Disease,"PARK2 protein, human",is associated with
+Parkinson Disease,ubiquitin C-terminal hydrolase,is associated with
+alpha-Synuclein,Parkinson Disease,seems to be responsible for
+alpha-Synuclein,HEK293 Cells,is not ubiquitinated in
+alpha-Synuclein,HEK293 Cells,does not behave as proteasome substrate in
+alpha-Synuclein,HEK293 Cells,does not undergo proteasomal degradation in
+Presenilins,Alzheimer's Disease,are associated with the risk of
+"herpesvirus 6, human",Brain,detected in
+Neural Stem Cells,Neurons,replace
+Hippocampus (Brain),Tauopathies,is associated with
+Tauopathies,uridine triacetate,involves
+Hippocampus (Brain),Neuroglia,affects
+uridine triacetate,Basal Ganglia,is found in
+uridine triacetate,Thalamic structure,is found in
+uridine triacetate,Limbic lobe,is found in
+alpha-Synuclein,colfosceril palmitate,interacts with
+alpha-Synuclein,Brain,is found in
+Apolipoprotein E,Lewy Bodies,is associated with
+alpha-Synuclein,Lewy Neurites,accumulates in
+"PARK2 protein, human","UBE2L3 protein, human",collaborates with
+"PARK2 protein, human",UBE2E2 gene,collaborates with
+alpha-Synuclein,Lewy Bodies,is a component of
+hydrogen peroxide,Hydroxyl Radical,converted to
+alpha-Synuclein,Lewy Neurites,is a major component of
+Glutathione S-Transferase,Alzheimer's Disease,modifies age-at-onset of
+Glutathione S-Transferase,Parkinson Disease,modifies age-at-onset of
+Glutathione S-Transferase,"interleukin-1, beta",maybe involved in the post-translational modification of
+GSTO1 gene,GSTO2 gene,located next to
+SEPTIN4 gene,alpha-Synuclein,can be co-immunoprecipitated with
+SEPTIN4 gene,alpha-Synuclein,forms detergent-insoluble complex with
+alpha-Synuclein,Lewy Bodies,is associated with
+"PARK2 protein, human",Ubiquitin,catalyzing the addition of
+"1-Methyl-4-phenyl-1,2,3,6-tetrahydropyridine",iron,accumulates
+apomorphine,IREB2 gene,prevents loss of
+epigallocatechin gallate,IREB2 gene,prevents loss of
+iron,alpha-Synuclein,causes aggregation of
+beta-Synuclein,alpha-Synuclein,prevents abnormal aggregation of
+alpha-Synuclein,Lewy Bodies,accumulates in
+homocysteine,Blood Vessel,increases the risk of
+Amyloid beta-Peptides,alpha-Synuclein,enhance accumulation of
+Amyloid beta-Peptides,alpha-Synuclein,promote aggregation of
+Lewy Bodies,Alzheimer's Disease,can be difficult to discriminate from
+Lewy Bodies,Parkinson Disease,can be difficult to discriminate from
+Dependovirus,alpha-Synuclein,expresses
+Buthionine Sulfoximine,glutathione,inhibits synthesis of
+Superoxides,arachidonic acid,generated during metabolism of
+alpha-Synuclein,Substantia nigra structure,is localized in
+Apolipoprotein E,HFE gene,is correlated with
+"TGM2 protein, human","TGM2 protein, human",serves as
+"TGM2 protein, human",Peripheral Nervous System,is expressed in
+"TGM2 protein, human",CENTRAL NERVOUS SYSTEM DIAGNOSTIC RADIOPHARMACEUTICALS,is expressed in
+methionine,valine,changed to
+amyloid-beta binding,Alzheimer's Disease,implicate
+Alzheimer's Disease,Parkinson Disease,is compared to
+NEDD8 gene,Cullin Proteins,is covalently ligated to
+Cholinesterases,Alzheimer's Disease,improve
+ACE gene,Apolipoprotein E,interact with
+Butyrylcholinesterase,Apolipoprotein E,interact with
+Lewy Bodies,alpha-Synuclein,contains
+Lewy Bodies,Ubiquitin,contains
+Lewy Bodies,Lewy Bodies,characterized by
+Parkinson Disease,Lewy Bodies,characterized by
+APP wt Allele,Heparan Sulfate Proteoglycans,co-localize with
+tacrine,donepezil,is replaced by
+tacrine,rivastigmine,is replaced by
+tacrine,galantamine,is replaced by
+galantamine,Nicotinic Receptors,binds to
+Amygdaloid structure,Lewy Bodies,is affected in
+24-hydroxycholesterol,Bile fluid,is efficiently converted into
+Alzheimer's Disease,Apolipoprotein E,has age at onset influenced by
+Parkinson Disease,Chromosome 1 Short Arm,has age at onset linked to
+Myosin Light Chain Kinase,Amyloid Fibrils,is associated with
+SH3 Domain,Amyloid Fibrils,can form
+PSMD8 gene,Amyloid Fibrils,can form
+alpha-Synuclein,"Drosophila <fruit fly, genus>",expressing
+alpha-Synuclein,Lewy body-like hyaline inclusion,form
+"PARK2 protein, human",Ubiquitin,colocalize with
+"PARK2 protein, human",gamma-Tubulin,colocalize with
+"PARK2 protein, human",alpha-Tubulin,colocalize with
+"PARK2 protein, human",Vimentin,cause redistribution of
+uridine triacetate,Apolipoprotein E2,correlates with
+Persons,Foxes,consume
+"SLC6A4 protein, human",serotonin,is responsible for the reuptake of
+folic acid,Cerebrovascular system,can protect
+alpha-Synuclein,Substantia nigra structure,accumulates in
+alpha-Synuclein,ubiquitin C-terminal hydrolase,interact with
+alpha-Synuclein,Parkinson Disease,aggregates in
+alpha-Synuclein,Lewy Bodies,aggregates in
+clonazepam,Eye,treats
+Eye,"Hematoma, Subdural",may result in
+alpha-Synuclein,glial cytoplasmic inclusion,associated with
+Ubiquitin,glial cytoplasmic inclusion,associated with
+superoxide dismutase,Superoxides,neutralizes
+GLUTATHIONE PEROXIDASE,hydrogen peroxide,neutralizes
+acetylcholinesterase,Alzheimer's Disease,is affected in
+Adrenal Cortex Diseases,acetylcholinesterase,has reduced activity of
+dopamine,Cingulate Cortex,depletes in
+rotenone,"1-Methyl-4-phenyl-1,2,3,6-tetrahydropyridine",similar to
+Amyloid beta-Peptides,Amyloid beta-Peptides,undergoes endoproteolysis
+Fibroblast Growth Factor 8,CENTRAL NERVOUS SYSTEM DIAGNOSTIC RADIOPHARMACEUTICALS,plays a critical role in
+Fibroblast Growth Factor 8,Neuroblastoma,attenuates the growth of
+Fibroblast Growth Factor 8,Neuroblastoma,is expressed in
+Fibroblast Growth Factor 8,Ganglioneuroblastoma,is expressed in
+Beta-glucuronidase,BETA-N-ACETYLHEXOSAMINIDASE,reduces
+Beta-glucuronidase,alpha-D-galactosidase enzyme,reduces
+LRRK2 gene,Parkinson Disease,is linked to
+Alzheimer's Disease,Apolipoprotein E,diagnosed by
+Neural Stem Cells,Astrocytes,differentiate into
+Neural Stem Cells,Oligodendroglia,differentiate into
+Amyloid beta-Protein Precursor,Neural Stem Cells,involved in
+Presenilins,Neural Stem Cells,involved in
+APP wt Allele,frontal lobe,deposits in
+"Anti-Inflammatory Agents, Non-Steroidal",Prostaglandin-Endoperoxide Synthase,inhibit
+"Anti-Inflammatory Agents, Non-Steroidal",nitric oxide,inhibit
+"Anti-Inflammatory Agents, Non-Steroidal",Amyloid beta-Peptides,inhibit
+brain cell,sodium,have
+"DNA, Mitochondrial",Brain,accumulate in
+Alzheimer's Disease,Brain,associated with
+Lewy Bodies,Brain,associated with
+Gaucher Disease,Parkinsonian Disorders,complicated with
+clioquinol,Parkinsonian Disorders,prevent oxidative damage
+Ferritin,Parkinsonian Disorders,prevent oxidative damage

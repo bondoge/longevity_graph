@@ -1,0 +1,186 @@
+subject,object,relation
+Gamma synuclein,Breast Carcinoma,is overexpressed in
+Gamma synuclein,ovarian neoplasm,may be overexpressed in
+alpha-Synuclein,Lewy Neurites,is a major component of
+alpha-Synuclein,phospholipids,interacts with
+"1-Methyl-4-phenyl-1,2,3,6-tetrahydropyridine",Mitochondria,is a mitochondrial toxin
+Lewy Bodies,alpha-Synuclein,is associated with
+Lewy Bodies,alpha-Synuclein,is associated with
+Microfilaments,uridine triacetate,are composed of
+uridine triacetate,Structure of entorhinal cortex,are observed in
+uridine triacetate,Prefrontal Cortex,are observed in
+Lewy Bodies,alpha-Synuclein,characterized by
+Presenilins,Amyloid beta-Peptides,is involved in generating
+Transforming Growth Factor beta,Astrocytes,have potent effects on
+Transforming Growth Factor beta,Microglia,have potent effects on
+Transforming Growth Factor beta,Oligodendroglia,have potent effects on
+NADH dehydrogenase (ubiquinone),Substantia nigra structure,loss of
+Ketoglutarate Dehydrogenase Complex,Substantia nigra structure,loss of
+superoxide dismutase,Substantia nigra structure,increase in
+dopamine,Substantia nigra structure,high content of
+iron,Substantia nigra structure,increase in
+glutathione,Substantia nigra structure,decrease in
+Synucleins,Phosphatidic Acid,binds to
+levodopa,Parkinson Disease,used for treatment of
+"DNA, Mitochondrial",Mitochondria,reduced expression of
+Nuclear deoxyribonucleic acid,Mitochondria,reduced expression of
+Microglia,Glutamates,release
+indomethacin,Alzheimer's Disease,is used to treat
+iron,Lewy Bodies,is increased in
+indomethacin,Alzheimer's Disease,arrested progress of
+Mitochondria,Parkinson Disease,are involved in
+alpha-Synuclein,Parkinson Disease,has mutations in
+Ubiquitin,Parkinson Disease,is affected by
+"DNA, Mitochondrial",Parkinson Disease,has mutations in
+cysteamine,Heme Oxygenase-1,up-regulates
+dopamine,Heme Oxygenase-1,up-regulates
+Amyloid beta-Peptides,Heme Oxygenase-1,up-regulates
+"interleukin-1, beta",Heme Oxygenase-1,up-regulates
+TNF gene,Heme Oxygenase-1,up-regulates
+Mesoporphyrins,Heme Oxygenase-1,inhibits
+dexamethasone,Heme Oxygenase-1,inhibits
+Heme Oxygenase-1,Alzheimer's Disease,is enhanced in
+Heme Oxygenase-1,Parkinson Disease,is enhanced in
+caspase,Huntington Disease,potential therapeutic approach for
+caspase,Alzheimer's Disease,potential therapeutic approach for
+amantadine,N-Methylaspartate,has N-methyl-D-aspartate receptor antagonistic properties
+Glutamates,Neocortex,has abnormality in
+Homovanillic Acid,Lewy Bodies,have low levels of
+"DNA, Mitochondrial",Hybrid Cells,expressed in
+RAINE SYNDROME,"NOS2A protein, human",is formed by
+"NOS2A protein, human","interleukin-1, beta",is induced by
+"Polyglucosan Body Disease, Adult Form",MAPK14 gene,suppresses activation of
+acetylcysteine,MAPK14 gene,suppresses activation of
+alpha-Synuclein,Parkinson Disease,seems to be responsible for
+alpha-Synuclein,HEK293 Cells,is not ubiquitinated in
+alpha-Synuclein,HEK293 Cells,does not behave as proteasome substrate in
+alpha-Synuclein,HEK293 Cells,does not undergo proteasomal degradation in
+nicotine,CHRNB4 gene,binds to
+carbachol,nicotine,displaces
+Amyloid beta-Peptides,Alzheimer's Disease,associated with
+Parkinson Disease,Alzheimer's Disease,is combined with
+Amyloid,Alzheimer's Disease,share identical amino acid sequence with
+"Amyotrophic Lateral Sclerosis, Guam Form",Neurofibrillary degeneration (morphologic abnormality),have
+Alzheimer's Disease,Neurofibrillary degeneration (morphologic abnormality),have
+APP wt Allele,Neurofibrillary degeneration (morphologic abnormality),is component of
+Amyloid beta-Peptides,glutamic acid,has neurodegenerative activity with
+Nucleosome-Remodeling Factor Subunit BPTF,Neurofibrillary degeneration (morphologic abnormality),immunostained
+Ubiquitin,Neurofibrillary degeneration (morphologic abnormality),immunostained
+uridine triacetate,Neurofibrillary degeneration (morphologic abnormality),immunostained
+Parkinson Disease,Alzheimer's Disease,is associated with
+Alzheimer's Disease,Neurofibrillary degeneration (morphologic abnormality),is characterized by
+Choline O-Acetyltransferase,Cell Nucleus,correlated with
+Calbindins,Corpus striatum structure,decreases in
+Calbindins,Cell Nucleus,decreases in
+Calbindins,Substantia nigra structure,decreases in
+Calbindins,Parkinson Disease,decreases in
+Calbindins,Huntington Disease,decreases in
+Calbindins,Alzheimer's Disease,decreases in
+nerve growth factor,Cholinergic Neurons,is associated with
+Cholinergic Neurons,nerve growth factor,are dependent on
+Alzheimer's Disease,Cholinergic Neurons,involves degeneration of
+Parkinson Disease,Cholinergic Neurons,involves degeneration of
+Lewy Bodies,Cholinergic Neurons,involves degeneration of
+iron,Hydroxyl Radical,catalyzes formation of
+alpha-Synuclein,Lewy Bodies,may link
+Ferritin,iron,is considered to be the iron storage protein
+BCL2 gene,selegiline,is among the proteins whose synthesis is altered by
+BAX gene,selegiline,is among the proteins whose synthesis is altered by
+superoxide dismutase 1,selegiline,is among the proteins whose synthesis is altered by
+Manganese Superoxide Dismutase,selegiline,is among the proteins whose synthesis is altered by
+alpha-Synuclein,Lewy Bodies,accumulates in
+nitric oxide,arginine,is formed from
+Nitric Oxide Synthase,Tetrahydrobiopterin,is necessary for
+levodopa,Lewy Bodies,has responsiveness
+Parkinson Disease,Nerve Growth Factors,is due to lack of
+Muscle Cells,Nerve Growth Factors,fail to release
+Glial Fibrillary Acidic Protein,Urodela,is expressed in
+Glial Fibrillary Acidic Protein,Structure of putamen,is expressed in
+Glial Fibrillary Acidic Protein,Globus Pallidus,is expressed in
+Lewy Bodies,Alzheimer's Disease,is compared to
+vitamin E,Amyloid beta-Peptides,protects neurons against
+aluminum,aspartic acid,yield stable complexes with
+aluminum,glutamic acid,yield stable complexes with
+Corticobasal Degeneration,Hippocampus (Brain),manifested overlapping neuropathologic features of
+Apolipoprotein E,Corticobasal Degeneration,genotype associated with
+Astrocytes,Heat Shock Protein 27,express
+Astrocytes,alpha-Crystallin B Chain,express
+Microglia,alpha-Crystallin B Chain,express
+Lewy Bodies,alpha 2-Glucoproteins,is associated with
+Apolipoprotein E,Lewy Bodies,affects
+alpha-Synuclein,Substantia nigra structure,is localized in
+Cerebral Amyloid Angiopathy,Parenchyma,was present in
+Tachykinin,Clinical Nurse Specialists,have a possible role in the aetiology of
+Alzheimer's Disease,Parkinson Disease,coexists with
+ACE gene,Apolipoprotein E,interact with
+Butyrylcholinesterase,Apolipoprotein E,interact with
+Amyloid beta-Peptides,Corpus striatum structure,was quantified in
+Amyloid beta-Peptides,Urodela,was found in
+Amyloid beta-Peptides,Nucleus Accumbens,was found in
+iodine,Malignant neoplasm of skin,may be linked to
+Alzheimer's Disease,Apolipoprotein E,is associated with
+Apolipoprotein E,Lewy Bodies,is associated with
+SERPINA3 gene,Lewy Bodies,is not a major risk factor for
+Amyloid beta-Peptides,Amyloid beta-Peptides,has sequence
+Neurofibrillary degeneration (morphologic abnormality),Neocortex,are present in
+Ubiquitin,Spinal Cord,is included in
+Adrenal Medulla,dopamine,provide
+CHTOP wt Allele,"SPINT1 protein, human",harbors
+Choline O-Acetyltransferase,corticotropin-releasing hormone,correlated with reduction in
+corticotropin-releasing hormone,Cerebral cortex,innervate
+Methionine Enkephalin,Basal Ganglia,distributed in
+"SLC6A4 protein, human",serotonin,is responsible for the reuptake of
+Alzheimer's Disease,Parkinson Disease,coexists with
+Apolipoprotein E,Lewy Bodies,associated with
+Apolipoprotein E4,Lewy Bodies,elevated in
+Apolipoprotein E4,Lewy Bodies,reduced in
+Apolipoprotein E,Amyloid beta-Peptides,is associated with
+Apolipoprotein E,Astrocytes,is localized in
+Microglia,Choose (action),detected in
+Astrocytes,Microglia,established as distinct from
+Glial Fibrillary Acidic Protein,Astrocytes,expressed in
+Quisqualic Acid,Cell Nucleus,lesions of
+Cytochrome P-450 CYP2D6,Lewy Bodies,is associated with
+Amyloid beta-Peptides,Amyloid beta-Peptides,stimulate the production of
+Amyloid beta-Peptides,Amyloid beta-Peptides,support the aggregation of
+Amyloid beta-Peptides,Amyloid beta-Peptides,increase the cytotoxicity of
+Anti-minor Histocompatibility Complex Donor T-Lymphocytes,Amyloid beta-Peptides,eliminate
+indomethacin,Alzheimer's Disease,arrest
+Apolipoprotein E4,Lewy Bodies,is a major genetic risk factor for
+"interleukin-1, beta",Hippocampus (Brain),was detected in
+Interleukin-2,Hippocampus (Brain),was detected in
+interleukin-3,Hippocampus (Brain),was detected in
+interleukin-6,Hippocampus (Brain),was measured in
+"DNA, Mitochondrial",Eye,may play a role in the development of
+Choline O-Acetyltransferase,acetylcholine,synthesizes
+Lewy Bodies,Choline O-Acetyltransferase,has lower
+tacrine,Lewy Bodies,is relevant to
+5-Hydroxyindoleacetic acid measurement,Homovanillic Acid,is correlated with
+Neurofibrillary degeneration (morphologic abnormality),Hippocampus (Brain),occur in
+Beta-glucuronidase,BETA-N-ACETYLHEXOSAMINIDASE,reduces
+Beta-glucuronidase,alpha-D-galactosidase enzyme,reduces
+exophthalmos producing substance,Lewy Bodies,occur in
+Presenilins,Alzheimer's Disease,are associated with
+Presenilins,Amyloid beta-Peptides,process
+Presenilins,beta catenin,interact with
+Alzheimer's Disease,Blood Vessel,influenced by
+Amyloid,Alzheimer's Disease,plays a role in
+BCL2 gene,Neuroglia,not expressed in
+BCL2 gene,Cerebral cortex,detected in
+BCL2 gene,Cell Nucleus,detected in
+BCL2 gene,Substantia nigra structure,detected in
+"DNA, Mitochondrial",Brain,accumulate in
+Alzheimer's Disease,Brain,associated with
+Lewy Bodies,Brain,associated with
+Glial Cell Line-Derived Neurotrophic Factor,Dopaminergic Neurons,is a potent survival factor for
+Monoamine Oxidase B,dopamine,catabolizes
+Monoamine Oxidase B,Parkinson Disease,associated with
+Adrenal Cortex,Subcortical,distinguished from
+parkin protein,Ubiquitin,is homologous to
+Neurofibrillary degeneration (morphologic abnormality),Cerebral cortex,found in
+Presenilin-1,Lewy Bodies,investigated in
+Ginkgo biloba extract,Alzheimer's Disease,treats
+Superoxides,Hydroxyl Radical,are converted into
+Lewy Bodies,Lewy Bodies,characterized by
+Lewy Bodies,Cerebral cortex,found in
+Lewy Bodies,Brain Stem,found in

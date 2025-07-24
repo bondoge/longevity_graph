@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CSV → Cytoscape Stepper (Prev/Next, Play/Pause, Real Scroll Toggle)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- libs -->
+  <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --edge: #ffffff33;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #f0f0f0;
+      font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+      line-height: 1.5;
+    }
+
+    #graph {
+      position: relative;
+      height: 70vh;
+      border-bottom: 1px solid #222;
+    }
+    #cy {
+      position: absolute;
+      inset: 0;
+    }
+
+    #toolbar {
+      position: absolute; top: 10px; left: 10px; z-index: 20;
+      display: flex; gap: 6px; align-items: center;
+      background: #1a1a1add; padding: 6px 10px; border-radius: 6px; backdrop-filter: blur(6px);
+      font-size: 14px;
+    }
+    #legend {
+      position: absolute; bottom: 10px; left: 10px;
+      background: #1a1a1add; padding: 8px 12px; border-radius: 8px;
+      font-size: 12px; line-height: 1.6; backdrop-filter: blur(6px); z-index: 20;
+    }
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+    .bullet { width: 10px; height: 10px; border-radius: 50%; }
+
+    button {
+      background: #222; color: #fafafa; border: 1px solid #666;
+      padding: 6px 10px; border-radius: 6px; cursor: pointer;
+    }
+    button:disabled { opacity: 0.4; cursor: default; }
+    button:hover:not(:disabled) { background: #333; }
+    #status { opacity: 0.8; font-size: 12px; margin-left: 4px; }
+
+    /* OPTIONAL small debug pane */
+    #debug {
+      position: absolute; right: 10px; top: 10px; z-index: 25;
+      background: #000000cc; padding: 8px 10px; border-radius: 6px;
+      font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      max-width: 240px; display: none;
+    }
+    #debug pre { white-space: pre-wrap; word-break: break-word; }
+
+    #extra-content {
+      padding: 24px 16px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    #extra-content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 12px 0 24px;
+      border-radius: 6px;
+    }
+
+    /* Node info popover (now positioned next to the clicked node) */
+    #nodeInfo {
+      position: absolute;
+      z-index: 30;
+      background: #1a1a1add;
+      backdrop-filter: blur(6px);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12px;
+      max-width: 280px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+      display: none;
+      pointer-events: none; /* so it doesn't eat mouse events */
+    }
+    #nodeInfo h4 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+    }
+    #nodeInfo table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    #nodeInfo td {
+      vertical-align: top;
+      padding: 2px 0;
+    }
+    #nodeInfo td.key {
+      opacity: 0.7;
+      padding-right: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="graph">
+    <div id="toolbar">
+      <button id="prevBtn">⟵ Prev</button>
+      <button id="playPauseBtn">▶ Play</button>
+      <button id="nextBtn">Next ➜</button>
+      <button id="scrollZoomBtn">Disable scroll/zoom</button>
+      <span id="status">Step 0 / ?</span>
+    </div>
+    <div id="legend"></div>
+    <div id="cy"></div>
+    <div id="nodeInfo"></div>
+    <div id="debug"><pre id="debugOut"></pre></div>
+  </div>
+
+  <div id="extra-content">
+    <h2>Longevity Knowledge Graph by Team 5</h2>
+    <p>
+      Graph is connected to backend Neo4j database. <br> Write a cypher query in a standart Neo4j language to modify, constraint graph, add nodes/edges, select visible nodes by a certain condition on its properties.
+      <br> Use mouse scroll to zoom. <br>
+      Click on a node to display its properties. <br>
+      Node size corresponds to mentions.<br>
+      Node color corresponds to class.<br>
+    </p>
+
+    <h3>Play/Next functionality</h3>
+    <p>
+      First graph shows nodes/edges for papers before year 2000. <br>
+      Click play/next to advance 3 years into the future. <br>
+    </p>
+
+    <img src="KG-01.png" alt="KG-01.png">
+
+    <h3>Conclusions / Next steps</h3>
+    <ul>
+      <li>Item one placeholder</li>
+      <li>Item two placeholder</li>
+      <li>Item three placeholder</li>
+    </ul>
+  </div>
+
+  <script>
+  (async function () {
+    // ---------------- CONFIG ----------------
+    const STEPS = ['01', '02', '03', '04'];
+    const NODE_FILE = s => `nodes_${s}.csv`;
+    const EDGE_FILE = s => `edges_${s}.csv`;
+    const STEP_INTERVAL_MS = 2500;
+
+    let DEBUG = false;
+
+    const labelColors = {
+      "gene_or_gene_product":"#0a84ff",
+      "organism":"#ff9f0a",
+      "simple_chemical":"#64d2ff",
+      "cell":"#32d74b",
+      "cellular_component":"#66d4cf",
+      "organ":"#5e5ce6",
+      "cancer":"#ff453a",
+      "small molecule":"#ffd60a"
+    };
+    const legendText = {
+      "gene_or_gene_product":"gene_or_gene_product",
+      "organism":"organism",
+      "simple_chemical":"chemical",
+      "cell":"cell",
+      "cellular_component":"cellular_component",
+      "organ":"organ",
+      "cancer":"disease",
+      "small molecule":"small molecule"
+    };
+
+    const sizeFromMentions = m => 14 + Math.log10((m || 0) + 1) * 12;
+
+    // ---------------- STATE ----------------
+    let cy;
+    let currentStep = -1;
+    const totalSteps = STEPS.length;
+    let playTimer = null;
+    let playing = false;
+    let isApplying = false;
+    let scrollZoomEnabled = true;
+
+    const seenNodes = new Set();
+    const seenEdges = new Set();
+    const nodeMentions = new Map();
+
+    const stepDeltas = STEPS.map(() => ({
+      addedNodes: [],
+      addedEdges: [],
+      mentionAdds: new Map()
+    }));
+
+    const steps = [];
+
+    window.state = () => ({
+      currentStep,
+      totalSteps,
+      seenNodes: seenNodes.size,
+      seenEdges: seenEdges.size,
+      nodeMentions: nodeMentions.size
+    });
+
+    // ---------------- INIT ----------------
+    buildLegend();
+    updateStatus();
+    await preloadSteps();
+    initCy();
+
+    const nodeInfoEl = document.getElementById('nodeInfo');
+
+    // Show popover NEXT TO the node
+    cy.on('tap', 'node', (e) => {
+      const node = e.target;
+      const d = node.data();
+
+      const rp = node.renderedPosition(); // pixel coords in cy container
+      const graphRect = document.getElementById('graph').getBoundingClientRect();
+      const cyRect = cy.container().getBoundingClientRect();
+
+      const left = rp.x + (cyRect.left - graphRect.left) + 12;
+      const top  = rp.y + (cyRect.top - graphRect.top) + 12;
+
+      showNodeInfo(d, left, top);
+    });
+
+    // Hide on background click or ESC
+    cy.on('tap', (e) => {
+      if (e.target === cy) hideNodeInfo();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') hideNodeInfo();
+    });
+
+    // Optionally hide the popover whenever the view changes (pan/zoom), so it doesn't float wrongly
+    cy.on('pan zoom', () => hideNodeInfo());
+
+    function showNodeInfo(d, left, top) {
+      nodeInfoEl.style.left = `${left}px`;
+      nodeInfoEl.style.top = `${top}px`;
+      nodeInfoEl.style.display = 'block';
+      nodeInfoEl.innerHTML = `
+        <h4>${escapeHtml(d.label)}</h4>
+        <table>
+          ${renderRow('entity / id', d.id)}
+          ${renderRow('class', d.class)}
+          ${renderRow('kb_id', d.kb_id)}
+          ${renderRow('link_confidence', d.link_confidence)}
+          ${renderRow('mentions', d.mentions)}
+        </table>
+      `;
+    }
+
+    function hideNodeInfo() {
+      nodeInfoEl.style.display = 'none';
+      nodeInfoEl.innerHTML = '';
+    }
+
+    function renderRow(key, value) {
+      if (value === undefined || value === null || value === '') return '';
+      return `<tr><td class="key">${escapeHtml(String(key))}</td><td>${escapeHtml(String(value))}</td></tr>`;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, s => (
+        { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[s]
+      ));
+    }
+
+    console.log('Loaded steps:', steps.map((s,i) => ({ step: i, nodes: s.nodes.length, edges: s.edges.length })));
+
+    await applyNextStep(); // apply step 0
+    bindUI();
+    refreshDebug();
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'd') {
+        DEBUG = !DEBUG;
+        refreshDebug();
+      }
+    });
+
+    // ---------------- UI ----------------
+    function bindUI() {
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const playPauseBtn = document.getElementById('playPauseBtn');
+      const scrollZoomBtn = document.getElementById('scrollZoomBtn');
+
+      prevBtn.addEventListener('click', async () => {
+        if (playing) stopPlaying();
+        await applyPrevStep();
+      });
+
+      nextBtn.addEventListener('click', async () => {
+        if (playing) stopPlaying();
+        await applyNextStep();
+      });
+
+      playPauseBtn.addEventListener('click', () => {
+        if (playing) {
+          stopPlaying();
+        } else {
+          startPlaying();
+        }
+      });
+
+      scrollZoomBtn.addEventListener('click', () => {
+        setScrollZoom(!scrollZoomEnabled);
+      });
+
+      function setScrollZoom(enableGraphZoom) {
+        scrollZoomEnabled = enableGraphZoom;
+
+        cy.userZoomingEnabled(enableGraphZoom);
+        cy.userPanningEnabled(enableGraphZoom);
+        cy.autoungrabify(!enableGraphZoom);
+
+        cy.container().style.pointerEvents = enableGraphZoom ? 'auto' : 'none';
+
+        scrollZoomBtn.textContent = enableGraphZoom
+          ? 'Disable scroll/zoom'
+          : 'Enable scroll/zoom';
+      }
+
+      function startPlaying() {
+        if (currentStep + 1 >= totalSteps) return;
+        playing = true;
+        playPauseBtn.textContent = '⏸ Pause';
+        playTimer = setInterval(async () => {
+          if (isApplying) return;
+          if (currentStep + 1 < totalSteps) {
+            await applyNextStep();
+          } else {
+            stopPlaying();
+          }
+        }, STEP_INTERVAL_MS);
+      }
+
+      function stopPlaying() {
+        playing = false;
+        playPauseBtn.textContent = '▶ Play';
+        clearInterval(playTimer);
+        playTimer = null;
+      }
+
+      window.applyNextStep = applyNextStep;
+      window.applyPrevStep = applyPrevStep;
+      window.startPlaying = startPlaying;
+      window.stopPlaying = stopPlaying;
+    }
+
+    // ---------------- FUNCTIONS ----------------
+    async function preloadSteps() {
+      for (const s of STEPS) {
+        const [nodesCsv, edgesCsv] = await Promise.all([
+          loadCSV(NODE_FILE(s)),
+          loadCSV(EDGE_FILE(s))
+        ]);
+        steps.push({
+          nodes: normalizeNodes(nodesCsv.data),
+          edges: normalizeEdges(edgesCsv.data)
+        });
+      }
+    }
+
+    function initCy() {
+      cy = cytoscape({
+        container: document.getElementById('cy'),
+        wheelSensitivity: 0.01,
+        userZoomingEnabled: scrollZoomEnabled,
+        userPanningEnabled: scrollZoomEnabled,
+        style: [
+          {
+            selector: 'node',
+            style: {
+              'background-color': 'data(color)',
+              'label': 'data(label)',
+              'font-size': 10,
+              'color': '#f0f0f0',
+              'text-wrap': 'wrap',
+              'text-max-width': '120px',
+              'text-valign': 'center',
+              'text-outline-width': 2,
+              'text-outline-color': '#00000055',
+              'border-width': 2,
+              'border-color': '#00000055',
+              'width': 'data(size)',
+              'height': 'data(size)',
+              'transition-property': 'background-color, border-width, width, height, line-color, opacity',
+              'transition-duration': '600ms'
+            }
+          },
+          {
+            selector: 'edge',
+            style: {
+              'width': 1.6,
+              'curve-style': 'bezier',
+              'line-color': 'var(--edge)',
+              'target-arrow-shape': 'triangle',
+              'target-arrow-color': 'var(--edge)',
+              'transition-property': 'line-color, width, opacity',
+              'transition-duration': '600ms'
+            }
+          },
+          {
+            selector: ':selected',
+            style: {
+              'background-color': '#ffd60a',
+              'line-color': '#ffd60a',
+              'target-arrow-color': '#ffd60a'
+            }
+          },
+          {
+            selector: '.new',
+            style: {
+              'border-width': 6,
+              'border-color': '#f39c12',
+              'background-color': '#f1c40f',
+              'line-color': '#f39c12',
+              'target-arrow-color': '#f39c12'
+            }
+          }
+        ]
+      });
+
+      window.cy = cy;
+    }
+
+    async function applyNextStep() {
+      if (isApplying) return;
+
+      const stepIndex = currentStep + 1;
+      if (stepIndex >= totalSteps) return;
+      isApplying = true;
+
+      const delta = stepDeltas[stepIndex];
+      const { nodes, edges } = steps[stepIndex];
+      const toAdd = [];
+
+      // nodes
+      for (const n of nodes) {
+        const id = n.data.id;
+        const addMentions = n.data.mentions || 0;
+
+        if (!delta.mentionAdds.has(id)) delta.mentionAdds.set(id, 0);
+        delta.mentionAdds.set(id, delta.mentionAdds.get(id) + addMentions);
+
+        if (!nodeMentions.has(id)) {
+          nodeMentions.set(id, addMentions);
+        } else {
+          nodeMentions.set(id, nodeMentions.get(id) + addMentions);
+        }
+        const totalMentions = nodeMentions.get(id);
+        const size = sizeFromMentions(totalMentions);
+
+        if (!seenNodes.has(id)) {
+          n.data.size = size;
+          toAdd.push(n);
+          seenNodes.add(id);
+          delta.addedNodes.push(id);
+        } else {
+          const el = cy.getElementById(id);
+          if (el && el.length) {
+            el.data('mentions', totalMentions);
+            el.data('size', size);
+          }
+        }
+      }
+
+      // edges
+      for (const e of edges) {
+        const eid = e.data.id;
+        if (!seenEdges.has(eid)) {
+          if (seenNodes.has(e.data.source) && seenNodes.has(e.data.target)) {
+            toAdd.push(e);
+            seenEdges.add(eid);
+            delta.addedEdges.push(eid);
+          }
+        }
+      }
+
+      let added = cy.collection();
+      cy.batch(() => {
+        if (toAdd.length) {
+          added = cy.add(toAdd);
+          added.addClass('new');
+        }
+      });
+
+      const layout = cy.layout({
+        name: 'cose',
+        animate: true,
+        animationDuration: 500,
+        fit: true,
+        padding: 50
+      });
+      layout.run();
+
+      if (added.length) {
+        setTimeout(() => added.removeClass('new'), 2000);
+      }
+
+      currentStep = stepIndex;
+      updateStatus();
+      refreshDebug({ stepIndex, addedNodes: delta.addedNodes.length, addedEdges: delta.addedEdges.length });
+
+      if (currentStep + 1 >= totalSteps) {
+        document.getElementById('nextBtn').disabled = true;
+      }
+      document.getElementById('prevBtn').disabled = (currentStep <= 0);
+
+      isApplying = false;
+    }
+
+    async function applyPrevStep() {
+      if (currentStep < 0) return;
+      if (isApplying) return;
+      isApplying = true;
+
+      const stepIndex = currentStep;
+      const delta = stepDeltas[stepIndex];
+
+      cy.batch(() => {
+        // remove edges first
+        for (const eid of delta.addedEdges) {
+          const el = cy.getElementById(eid);
+          if (el && el.length) cy.remove(el);
+          seenEdges.delete(eid);
+        }
+
+        // adjust mentions for nodes not removed
+        for (const [id, m] of delta.mentionAdds.entries()) {
+          if (delta.addedNodes.includes(id)) continue;
+          const newVal = Math.max(0, (nodeMentions.get(id) || 0) - m);
+          nodeMentions.set(id, newVal);
+          const el = cy.getElementById(id);
+          if (el && el.length) {
+            el.data('mentions', newVal);
+            el.data('size', sizeFromMentions(newVal));
+          }
+        }
+
+        // remove nodes that were added newly in this step
+        for (const id of delta.addedNodes) {
+          const el = cy.getElementById(id);
+          if (el && el.length) cy.remove(el);
+          seenNodes.delete(id);
+          nodeMentions.delete(id);
+        }
+      });
+
+      const layout = cy.layout({
+        name: 'cose',
+        animate: true,
+        animationDuration: 500,
+        fit: true,
+        padding: 50
+      });
+      layout.run();
+
+      currentStep--;
+      updateStatus();
+      refreshDebug({ stepIndex, undo: true });
+
+      document.getElementById('nextBtn').disabled = false;
+      document.getElementById('prevBtn').disabled = (currentStep <= 0);
+
+      isApplying = false;
+    }
+
+    function updateStatus() {
+      const shown = Math.max(currentStep, -1) + 1;
+      document.getElementById('status').textContent = `Step ${shown} / ${totalSteps}`;
+    }
+
+    function refreshDebug(extra = {}) {
+      const box = document.getElementById('debug');
+      const out = document.getElementById('debugOut');
+      if (!DEBUG) {
+        box.style.display = 'none';
+        return;
+      }
+      box.style.display = 'block';
+      const nextIndex = currentStep + 1 < totalSteps ? currentStep + 1 : null;
+      const data = {
+        currentStep,
+        nextIndex,
+        totalSteps,
+        seenNodes: seenNodes.size,
+        seenEdges: seenEdges.size,
+        nodeMentions: nodeMentions.size,
+        ...extra
+      };
+      out.textContent = JSON.stringify(data, null, 2);
+    }
+
+    // -------------- HELPERS --------------
+    function loadCSV(path) {
+      return new Promise((resolve, reject) => {
+        Papa.parse(path, {
+          header: true,
+          skipEmptyLines: 'greedy',
+          download: true,
+          complete: results => resolve(results),
+          error: err => reject(err)
+        });
+      });
+    }
+
+    function normalizeNodes(rows) {
+      return rows
+        .filter(r => r.entity)
+        .map(r => {
+          const cls = (r.class || '').trim().toLowerCase();
+          const mentions = toNumber(r.mentions);
+          const kb_id = (r.kb_id || '').trim();
+          const link_confidence = toNumber(r.link_confidence);
+
+          return {
+            group: 'nodes',
+            data: {
+              id: r.entity,
+              label: r.entity,
+              class: cls,
+              color: labelColors[cls] || '#40c8e0',
+              mentions: mentions,
+              size: sizeFromMentions(mentions),
+              kb_id,
+              link_confidence
+            }
+          };
+        });
+    }
+
+    function normalizeEdges(rows) {
+      return rows
+        .filter(r => r.subject && r.object)
+        .map(r => {
+          const src = r.subject;
+          const tgt = r.object;
+          const rel = r.relation || '';
+          return {
+            group: 'edges',
+            data: {
+              id: `${src}|${rel}|${tgt}`,
+              source: src,
+              target: tgt,
+              relation: rel
+            }
+          };
+        });
+    }
+
+    function toNumber(x) {
+      const n = Number(x);
+      return Number.isFinite(n) ? n : 0;
+    }
+
+    function buildLegend() {
+      const l = document.getElementById("legend");
+      l.innerHTML = Object.entries(labelColors)
+        .map(([k, v]) => `<div class='legend-item'><span class='bullet' style='background:${v}'></span>${legendText[k]}</div>`)
+        .join("");
+    }
+  })();
+  </script>
+</body>
+</html>

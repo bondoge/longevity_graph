@@ -1,0 +1,299 @@
+subject,object,relation
+PINK1 gene,Parkinson Disease,is associated with
+LRRK2 gene,Corticobasal Degeneration,is associated with
+alpha-Synuclein,Skin fibroblast,expression is induced in
+Mitochondria,Reactive Oxygen Species,are exposed to
+Amyloid beta-Peptides,neuromelanin,shares characteristics with
+Amyloid beta-Peptides,Microglia,activates
+neuromelanin,Microglia,activates
+Microglia,Neoplasms,induces release of
+Microglia,interleukin-6,induces release of
+Microglia,nitric oxide,induces release of
+alpha-Synuclein,Mitochondria,shows localization to
+"PARK2 protein, human",Mitochondria,shows localization to
+PINK1 gene,Mitochondria,shows localization to
+PARK7 gene,Mitochondria,shows localization to
+LRRK2 gene,Mitochondria,shows localization to
+HTR2A gene,Mitochondria,shows localization to
+Kynurenine,Kynurenic Acid,can change to
+Kynurenine,Quinolinic Acid,can change to
+Kynurenic Acid,N-Methylaspartate,has neuroprotective effects on
+PINK1 gene,"PARK2 protein, human",acts upstream of
+alpha-Synuclein,Substantia nigra structure,aggregates in
+PINK1 gene,Parkinson Disease,is associated with
+alpha-Synuclein,Lewy Bodies,can cause
+Alzheimer's Disease,Amyloid beta-Peptides,is featured by deposition of
+Alzheimer's Disease,alpha-Synuclein,is featured by deposition of
+Alzheimer's Disease,Parkinson Disease,has overlap with
+alpha-Synuclein,Parkinson Disease,causes
+"PARK2 protein, human",Parkinson Disease,causes
+UCHL1 gene,Parkinson Disease,causes
+PINK1 gene,Parkinson Disease,causes
+PARK7 gene,Parkinson Disease,causes
+LRRK2 gene,Parkinson Disease,causes
+alpha-Synuclein,Mitochondria,accumulates in
+PARK7 gene,Mitochondria,associated with
+PINK1 gene,Mitochondria,associated with
+Mitochondria,adenosine triphosphate,produce
+Mitochondria,calcium,sequester
+alpha-Synuclein,alpha-Synuclein,forms oligomer and aggregate
+LRRK2 gene,Parkinson Disease,causes
+alpha-Synuclein,Parkinson Disease,causes
+PARK7 gene,Parkinson Disease,causes
+PINK1 gene,Parkinson Disease,causes
+APP gene,Alzheimer's Disease,implicated in
+Psen,Alzheimer's Disease,implicated in
+SORL1 gene,Alzheimer's Disease,associated with
+PINK1 gene,Mitochondria,is associated with
+PARK7 gene,Mitochondria,is associated with
+alpha-Synuclein,Mitochondria,is associated with
+iron,Amyloid beta-Protein Precursor,modulate
+Amyloid beta-Protein Precursor,iron,translate
+alpha-Synuclein,iron,translate
+"PSEN1 protein, human",Presenilin-1,encodes
+"PSEN2 protein, human",Presenilin-2,encodes
+Endothelial Cells,Blood - brain barrier anatomy,part of
+PARK7 gene,Malignant Neoplasms,is a biomarker for
+ubiquitin C-terminal hydrolase,protein autoubiquitination,stabilizing
+Lysosomes,Mitochondria,are responsible for maintaining
+"PARK2 protein, human",Mitochondria,protects
+Alzheimer's Disease,amyloid-beta binding,associated with
+Mitochondria,amyloid-beta binding,target of
+APP gene,Mitochondria,accumulate in
+alpha-Synuclein,Mitochondria,accumulate in
+APP wt Allele,Mitochondria,transport into
+alpha-Synuclein,Parkinson Disease,causes
+alpha-Synuclein,Dopaminergic Neurons,accumulates in
+Lysosomes,Autophagic vaculoes (finding),accumulate
+PINK1 gene,"PARK2 protein, human",interacts with
+latrepirdine,Mitochondria,has an action on
+PINK1 gene,Mitochondria,is localized to
+alpha-Synuclein,Parkinson Disease,is detected
+alpha-Synuclein,Parkinson Disease,leads to
+alpha-Synuclein,alpha-Synuclein,misfolding of
+Parkinson Disease,alpha-Synuclein,has genetic component
+Parkinson Disease,"PARK2 protein, human",has genetic component
+Parkinson Disease,PINK1 gene,has genetic component
+Parkinson Disease,PARK7 gene,has genetic component
+Parkinson Disease,LRRK2 gene,has genetic component
+Parkinson Disease,Mitochondria,involves
+cholesterol,"Niemann-Pick Disease, Type C",is involved in the pathogenesis of
+cholesterol,alpha-Synuclein,interacts with
+cholesterol,NPC1 gene,interacts with
+cholesterol,NPC2 gene,interacts with
+PINK1 gene,Mitochondria,localizes to
+Reactive Oxygen Species,Brain,produced in
+"Lamr1 protein, human",Sindbis Virus,acts as a receptor for
+"Lamr1 protein, human","Encephalomyelitis, Equine",acts as a receptor for
+"Lamr1 protein, human",Dengue Virus,acts as a receptor for
+"Lamr1 protein, human",Malignant Neoplasms,represents an alternative target for therapy of
+alpha-Synuclein,Parkinson Disease,is involved in
+PARK7 gene,Parkinson Disease,is involved in
+Pink color,Parkinson Disease,is involved in
+LRRK2 gene,Parkinson Disease,is involved in
+alpha-Synuclein,beta-Synuclein,is distinct from
+SKP1 gene,1-Methyl-4-phenylpyridinium,silencing resulted in increased susceptibility to
+alpha-Synuclein,Parkinson Disease,mutations cause
+PINK1 gene,Parkinson Disease,mutations cause
+PARK7 gene,Parkinson Disease,mutations cause
+LRRK2 gene,Parkinson Disease,mutations cause
+Mitochondria,Amyloid beta-Peptides,enters
+polyphenols,iron,are
+SKP1 gene,Substantia nigra structure,is decreased in
+Lewy Bodies,alpha-Synuclein,is thought to be related to
+Lewy Bodies,Lewy Bodies,is a presentation of
+alpha-Synuclein,Lewy Bodies,involved in
+Synphilin-1,Lewy Bodies,involved in
+Lewy Bodies,Alzheimer's Disease,compared with
+alpha-Synuclein,Lewy Bodies,affected in
+Synphilin-1,Parkinson Disease,affected in
+amyloid-beta binding,Alzheimer's Disease,associated with
+"ABeta amyloidosis, Arctic type",amyloid-beta binding,accelerates fibrillization of
+Amyloid beta-Protein Precursor,amyloid-beta binding,produces
+"HD protein, human",Huntington Disease,cause
+alpha-Synuclein,Parkinson Disease,cause
+lithium,glycogen synthase kinase 3 beta,inhibits
+"4-benzyl-2-methyl-1,2,4-thiadiazolidine-3,5-dione",glycogen synthase kinase 3 beta,inhibits
+Mitochondria,Cardiomyopathies,are involved in
+Mitochondria,Malignant Neoplasms,are involved in
+Mitochondria,adenosine triphosphate,produce
+Synphilin-1,alpha-Synuclein,interacts with
+Lewy Bodies,Alzheimer's Disease,coexist with
+"Cytochrome C, human",Amyloid,involved in
+PARK7 gene,alpha-Synuclein,interacts with
+PARK7 gene,PINK1 gene,interacts with
+mortalin,TP53 gene,inhibits
+Mitochondria,calcium,accumulate
+PINK1 gene,Parkinson Disease,contribute to
+PINK1 gene,Mitochondria,regulate
+epigallocatechin gallate,Alzheimer's Disease,may decrease the incidence of
+epigallocatechin gallate,Parkinson Disease,may decrease the incidence of
+Monoamine Oxidase,serotonin,catalyze the oxidative deamination of
+Monoamine Oxidase,norepinephrine,catalyze the oxidative deamination of
+Monoamine Oxidase,dopamine,catalyze the oxidative deamination of
+Monoamine Oxidase,phenethylamine,catalyze the oxidative deamination of
+"SIAH2 protein, human",alpha-Synuclein,ubiquitinates
+alpha-Synuclein,"SIAH2 protein, human",interacts with
+"SIAH2 protein, human",UBE2E2 gene,binds
+alpha-Synuclein,Lewy Bodies,associated with
+alpha-Synuclein,Tissue membrane,binds to
+alpha-Synuclein,alpha-Synuclein,fibrillizes
+PARK7 gene,alpha-Synuclein,co-expressed with
+PINK1 gene,alpha-Synuclein,co-expressed with
+UCHL1 gene,alpha-Synuclein,co-expressed with
+SNCAIP gene,alpha-Synuclein,co-expressed with
+methamphetamine,Dopaminergic Neurons,damages
+Tumor Necrosis Factors,Dopaminergic Neurons,hasten the death of
+Parkinson Disease,Malignant Neoplasms,have low rates of
+PARK7 gene,Malignant Neoplasms,is an oncogene
+Malignant neoplasm of breast,Parkinson Disease,occur more frequently in
+melanoma,Parkinson Disease,occur more frequently in
+"PARK2 protein, human",PINK1 gene,stabilizes
+"PARK2 protein, human",PINK1 gene,interacts with
+"PARK2 protein, human",PINK1 gene,interferes with degradation of
+PINK1 gene,Parkinson Disease,is associated with
+amyloid-beta binding,Rage,interacts with
+PSMC2 gene,PSMD1 gene,had significant correlations with
+PSMD1 gene,Mandibular left second premolar tooth,had significant correlations with
+PSMD1 gene,Ubiquitin,had significant correlations with
+Amyloid beta-Peptides,Alcohol dehydrogenase,binds to
+TP73 gene,JUN kinase activity,targets
+Lewy Bodies,amyloid-beta binding,characterized by
+Disease,amyloid-beta binding,characterized by
+Parkinson Disease,Gaucher Disease,increased incidence among relatives of patients with
+Amyloid beta-Peptides,alpha-Synuclein,promotes aggregation of
+Amyloid beta-Peptides,alpha-Synuclein,interacts with
+PINK1 gene,MTFP1 gene,interact with
+Drosophila melanogaster,PINK1 gene,used to study
+Genus: Lentivirus group,Cell body of neuron,mediate gene transfer into
+Heme Oxygenase-1,Substantia nigra structure,is overexpressed in
+Heme Oxygenase-1,Cerebral cortex,is overexpressed in
+transglutaminase 2,amyloid-beta binding,cross-links
+transglutaminase 2,alpha-Synuclein,cross-links
+transglutaminase 2,"HD protein, human",cross-links
+transglutaminase 2,Heat shock proteins,cross-links
+alpha-Synuclein,Lewy Bodies,is found in
+Parkinsonian Disorders,Alzheimer's Disease,is inversely related to
+Apolipoprotein E2,Alzheimer's Disease,is controlled for
+APP wt Allele,alpha-Synuclein,promotes aggregation of
+APP wt Allele,alpha-Synuclein,interacts with
+"PARK2 protein, human",Parkinson Disease,linked to
+PINK1 gene,Parkinson Disease,linked to
+PARK7 gene,Parkinson Disease,linked to
+LRRK2 gene,Parkinson Disease,linked to
+PINK1 gene,PTEN gene,induced by
+alpha-Synuclein,alpha-Synuclein,aggregates
+Disease,alpha-Synuclein,associated with
+alpha-Synuclein,Ubiquitin,co-localized with
+"PARK2 protein, human",alpha-Synuclein,acts in the same biochemical pathway as
+Amyloid beta-Peptides,"DNA, Mitochondrial",accumulate
+PINK1 gene,"PARK2 protein, human",interacts with
+PINK1 gene,Mitochondria,has a role in
+PINK1 gene,"PARK2 protein, human",recruits
+"PARK2 protein, human",Mitochondria,translocates to
+PINK1 gene,Mitochondria,expressed in
+Ataxia Telangiectasia,Malignant neoplasm of breast,contributes to
+Ataxia Telangiectasia,Hematologic Neoplasms,contributes to
+Transferrin,aluminum,mediates uptake of
+Transferrin,manganese,mediates uptake of
+Transferrin,iron,mediates uptake of
+levodopa,Parkinson Disease,treats
+PINK1 gene,"PARK2 protein, human",acts in a common pathway with
+SNCA gene,alpha-Synuclein,is a causal mutation of
+SNCA gene,alpha-Synuclein,is a multiplication of
+alpha-Synuclein,Apolipoprotein E,causes increase in
+alpha-Synuclein,APP wt Allele,causes accumulation of
+alpha-Synuclein,Microglia,interact with
+alpha-Synuclein,Astrocytes,interact with
+Microglia,"interleukin-1, beta",release
+Microglia,TNF gene,release
+Microglia,interleukin-6,release
+Microglia,Superoxides,release
+LRRK2 gene,LRRK2 gene,is causative gene for
+LRRK2 gene,alpha-Synuclein,phosphorylates
+UCHL1 gene,"BMP2 protein, human",physically interacts with
+UCHL1 gene,HSPA8 gene,physically interacts with
+UCHL1 gene,HSP90 Heat-Shock Proteins,physically interacts with
+"PARK2 protein, human",Mitochondria,associated with
+nitric oxide,protein disulfide isomerase activity,S-nitrosylates
+Parkinson Disease,alpha-Synuclein,associated with
+Alzheimer's Disease,Malignant Neoplasms,is associated with
+Malignant Neoplasms,Alzheimer's Disease,is associated with
+Alzheimer's Disease,Malignant Neoplasms,has reduced risk of
+Malignant Neoplasms,Alzheimer's Disease,has reduced risk of
+Blood Vessel,Malignant Neoplasms,is not associated with
+ubiquitin C-terminal hydrolase,Lewy Bodies,down-regulated in
+ubiquitin C-terminal hydrolase,Medulla Oblongata,down-regulated in
+ubiquitin C-terminal hydrolase,Substantia nigra structure,decreased in
+alpha-Synuclein,Parkinson Disease,self-aggregates in
+SEPTIN4 gene,alpha-Synuclein,modulates
+Lewy Bodies,CHRNA3 gene,is associated with reductions in
+Lewy Bodies,"Neuronal Acetylcholine Receptor Subunit Beta-4, Human",is associated with reductions in
+Lewy Bodies,CHRNA3 gene,is associated with deficits in
+Lewy Bodies,"Neuronal Acetylcholine Receptor Subunit Beta-4, Human",is associated with deficits in
+Antiviral Agents,"Infectious Anemia Virus, Equine",derived from
+Antiviral Agents,Simian immunodeficiency virus,derived from
+Antiviral Agents,Feline Immunodeficiency Virus,derived from
+BECN1 gene,alpha-Synuclein,reduces accumulation of
+alpha-Synuclein,Lewy Bodies,accumulates in
+amyloid-beta binding,Cerebral cortex,occurs in
+alpha-Synuclein,Brain Stem,occurs in
+TP53 gene,BCL2 gene,inhibits
+BAX gene,Cytochromes c,activates
+Cytochromes c,Procaspase-9,truncates
+Astrocytes,TNF gene,secrete
+Microglia,FASLG gene,secrete
+Lewy Bodies,alpha-Synuclein,are characterized by
+Lewy Bodies,Lewy Bodies,include
+Lewy Bodies,Lewy Bodies,include
+Substantia nigra structure,Lewy Bodies,is affected by
+Structure of olfactory bulb,Lewy Bodies,is involved in
+Neocortex,Lewy Bodies,is involved in
+Peptides,alpha-Synuclein,interact with
+iron,Reactive Oxygen Species,is implicated as a source of
+SNCA gene,PRKN gene,interact with
+SNCA gene,UCHL1 gene,interact with
+PRKN gene,UCHL1 gene,interact with
+alpha-Synuclein,Parkinson Disease,implicated in
+NEDD9 gene,Apolipoprotein E,shows inverse correlation with
+Eye,clonazepam,responds to
+alpha-Synuclein,uridine triacetate,co-occur with
+alpha-Synuclein,Hippocampus (Brain),found in
+alpha-Synuclein,uridine triacetate,co-existence with
+acetylcholinesterase,Lewy Bodies,are effective for
+acetylcholinesterase,Disease,are effective for
+Lewy Bodies,acetylcholinesterase,responds better to
+Disease,acetylcholinesterase,responds better to
+Apolipoprotein E,brain-derived neurotrophic factor,interacts with
+Apolipoprotein E,brain-derived neurotrophic factor,interacts with
+homocysteine,Methylenetetrahydrofolate reductase (NADPH),undergoes remethylation due to involvement of
+homocysteine,MTHFD1 gene,undergoes remethylation due to involvement of
+CENTRAL NERVOUS SYSTEM DIAGNOSTIC RADIOPHARMACEUTICALS,Skeletal,are characterized by
+PINK1 gene,Parkinson Disease,mutations found in
+Mitochondria,Parkinson Disease,play a major role in the pathogenesis of
+Glutathione S-Transferase,Alzheimer's Disease,associate with
+Glutathione S-Transferase,Parkinson Disease,associate with
+Coronal (qualifier value),Alzheimer's Disease,differentiate
+Posterior cortical cataract,Eye,is associated with
+Hydroxyl Radical,hydrogen peroxide,is catalytically converted from
+dopamine,Structure of putamen,revealed reduction of uptake in
+homocysteic acid,alpha-Synuclein,induces
+homocysteic acid,Amyloid beta-Peptides,accumulates
+Niemann-Pick Diseases,Hepatosplenomegaly,characterized by
+Niemann-Pick Diseases,Cherry Flavor,associated with
+Glutamates,N-Methylaspartate,activates
+Endothelial Progenitor Cells,Endothelium,provide a cellular reservoir for
+Alzheimer's Disease,Cells,have reduced
+SPINOCEREBELLAR ATAXIA 17,TATA-Box Binding Protein,involves
+tributyl phosphate,TATA-Box Binding Protein,encodes
+technetium 99m,ethylene,is used with
+Cerebrovascular Circulation,medial olfactory area,measured in
+SUCLA2 gene,Alzheimer's Disease,contributes to disease pathogenesis of
+SQSTM1 gene,Alzheimer's Disease,exhibited declined expression in
+T-Lymphocyte,Alzheimer's Disease,have intensified suppressive activity in
+T-Lymphocyte,Parkinson Disease,have intensified suppressive activity in
+caseins,Amyloid beta-Peptides,associate with
+"PARK2 protein, human",PINK1 gene,work downstream of
+LRRK2 gene,LRRK2 gene,has a mutation
+Prostaglandin-Endoperoxide Synthase,"Anti-Inflammatory Agents, Non-Steroidal",is the major target of
+rivastigmine,Lewy Bodies,treat
